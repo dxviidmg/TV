@@ -1,0 +1,7 @@
+Lista de Canales
+
+{%for canal in canales%}
+<p><a href="{%url 'canales:DetailViewCanal' canal.pk%}">{{canal.nombre}}</a></p>
+{%empty%}
+Vacio
+{%endfor%}

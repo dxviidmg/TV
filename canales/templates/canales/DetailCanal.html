@@ -1,0 +1,7 @@
+<p>Nombre: {{canal.nombre}}</p>
+<p>Enlace: {{canal.enlace}}</p>
+<p><a href="{%url 'canales:ListViewCanales'%}">Regresar al menu</a></p>
+<iframe width="728" height="410" scrolling="no" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" src="http://youtvgratis.com/embed/{{canal.enlace}}"></iframe>
+  
+<script type='text/javascript'> width=728, height=410, channel='{{canal.enlace}}';</script>
+<script type='text/javascript' src='http://tutvgratis.tv/embed.js'></script>
