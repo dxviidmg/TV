@@ -5,9 +5,20 @@ from .models import *
 class ListViewCanales(View):
 	def get(self, request):
 		template_name = 'canales/ListCanales.html'
-		canales = Canal.objects.all()
+		categorias = Categoria.objects.all()
+#		canales = Canal.objects.all()
+
+		ListaDeCanalesPorCategoria = []
+
+		for categoria in categorias:
+			ListaDeCanalesPorCategoria.append({'categoria': categoria.nombre, 'canales': Canal.objects.filter(categoria=categoria)})
+			#objects.append({'user':perm.user,'edit':perm.edit})
+
+		print(ListaDeCanalesPorCategoria)
 		context = {
-		'canales': canales
+#		'categorias': categorias,
+#		'canales': canales,
+		'ListaDeCanalesPorCategoria': ListaDeCanalesPorCategoria
 		}
 		return render(request, template_name, context)
 

@@ -1,7 +1,13 @@
-Lista de Canales
+<h1>Menú</h1>
 
-{%for canal in canales%}
-<p><a href="{%url 'canales:DetailViewCanal' canal.pk%}">{{canal.nombre}}</a></p>
+{%for CanalesPorCategoria in ListaDeCanalesPorCategoria%}
+<p>{{CanalesPorCategoria.categoria}}</p>
+	{%for canal in CanalesPorCategoria.canales%}
+	<a href="{%url 'canales:DetailViewCanal' canal.pk%}"><img src="{{canal.logo.url}}"></a>
+	{%empty%}
+	vacio
+	{%endfor%}
+<br>
 {%empty%}
-Vacio
+
 {%endfor%}

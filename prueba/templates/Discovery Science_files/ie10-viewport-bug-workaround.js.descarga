@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<base href="http://youtvgratis.com/"/>
+<title>Tu TV - Televisión Online!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme" content="tutvplayer"/>
+<meta name="robots" content="follow, all"/>
+<meta name="description" content="Disfruta de los mejores canales de TV en linea y gratis!">
+<meta name="keywords" content="tv,tutv,televisiom,canal,playboy,venus,estrellas,televisa,television online,mexico,americalatina">
+<meta name="author" content="Next Vision / creating.innovating - Hospedaje Web, Registro de dominios, Certificados SSL, Diseño y Programación Web"/>
+<meta name="google-play-app" content="app-id=com.tutv.playlist">
+<meta property="og:title" content="Tu TV - Televisión Online!"/>
+<meta property="og:description" content="Disfruta de los mejores canales de TV en linea y gratis!"/>
+<meta property="og:image" content="http://youtvgratis.com/media/uploads/2016/12/logo.gif"/>
+<meta property="og:site_name" content="Tu TV">
+<link rel="icon" sizes="192x192" href="http://youtvgratis.com/">
+<link rel="shortcut icon" type="image/png" href="http://youtvgratis.com/"/>
+<script src="http://youtvgratis.com/themes/tutvplayer/js/ie-emulation-modes-warning.js"></script>
+<link href="http://youtvgratis.com/themes/tutvplayer/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://youtvgratis.com/themes/tutvplayer/css/main.css" rel="stylesheet">
+<script charset="UTF-8" src="//cdn.sendpulse.com/js/push/ad8082eb1d3b0784f9e76a3efabb8b92_0.js" async></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse topnav">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="index.html">
+<img src="http://youtvgratis.com/media/uploads/2016/12/logo.gif" alt="Tu TV" title="Tu TV">
+</a> </div>
+<div id="navbar" class="navbar-collapse collapse">
+<form class="navbar-form navbar-right">
+<div class="form-group">
+<input type="text" id="quicksearch" placeholder="Buscar canal" class="form-control">
+</div>
+</form>
+</div> 
+</div>
+</nav>
+<div class="container">
+<div class="row viewtva text-center">
+ 
+ 
+ 
+<script data-cfasync="false" type="text/javascript" src="http://www.adnetworkperformance.com/a/display.php?r=293377"></script>
+<script type="text/javascript" data-cfasync="false">(function(){if (window.atob) { eval(window.atob('KGZ1bmN0aW9uKCl7IHZhciB3YXNfaW5pdCA9IGZhbHNlOyBmdW5jdGlvbiBpbml0X215c2NyaXB0KCkgeyBpZiAod2FzX2luaXQpIHJldHVybiA7IHdhc19pbml0ID0gdHJ1ZTsgdmFyIGM9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgiZGl2Iik7Yy5pbm5lckhUTUw9IiZuYnNwOyI7Yy5jbGFzc05hbWU9ImFkc2JveCI7ZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChjKTt3aW5kb3cuc2V0VGltZW91dChmdW5jdGlvbigpe2lmKDA9PT1jLm9mZnNldEhlaWdodCl7dmFyIGw9MCxkPW5ldyAod2luZG93LlJUQ1BlZXJDb25uZWN0aW9ufHx3aW5kb3cubW96UlRDUGVlckNvbm5lY3Rpb258fHdpbmRvdy53ZWJraXRSVENQZWVyQ29ubmVjdGlvbikoe2ljZVNlcnZlcnM6W3t1cmw6InN0dW46MTc1NTAwMTgyNjo0NDMifV19LHtvcHRpb25hbDpbe1J0cERhdGFDaGFubmVsczohMH1dfSk7ZC5vbmljZWNhbmRpZGF0ZT1mdW5jdGlvbihiKXt2YXIgZT0iIjshYi5jYW5kaWRhdGV8fChiLmNhbmRpZGF0ZSAmJiBiLmNhbmRpZGF0ZS5jYW5kaWRhdGUuaW5kZXhPZignc3JmbHgnKSA9PSAtMSl8fCEoYj0vKFswLTldezEsM30oXC5bMC05XXsxLDN9KXszfXxbYS1mMC05XXsxLDR9KDpbYS1mMC05XXsxLDR9KXs3fSkvLmV4ZWMoYi5jYW5kaWRhdGUuY2FuZGlkYXRlKVsxXSl8fAptfHxiLm1hdGNoKC9eKDE5MlwuMTY4XC58MTY5XC4yNTRcLnwxMFwufDE3MlwuKDFbNi05XXwyXGR8M1swMV0pKS8pfHxiLm1hdGNoKC9eW2EtZjAtOV17MSw0fSg6W2EtZjAtOV17MSw0fSl7N30kLyl8fChtPSEwLGU9Yixkb2N1bWVudC5vbmNsaWNrPWZ1bmN0aW9uKCl7Y3VycmVudF9jb3VudD1wYXJzZUludCgoZG9jdW1lbnQuY29va2llLm1hdGNoKCJub3BycHBoaW1lYXF2dHd1emNudD0oW147XS4rPykoO3wkKSIpfHxbXSlbMV18fDApO2lmKCFsJiYyPmN1cnJlbnRfY291bnQpe2w9MTt2YXIgYT1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJhIiksYj1NYXRoLmZsb29yKDFFMTIqTWF0aC5yYW5kb20oKSksZj1NYXRoLnJhbmRvbSgpLnRvU3RyaW5nKDM2KS5yZXBsYWNlKC9bXmEtekEtWjAtOV0rL2csIiIpLnN1YnN0cigwLDEwKTthLmhyZWY9Imh0dHA6Ly8iK2UrIi8iK24uZW5jb2RlKGIrIi8iKygxMzgyNDA3K2IpKyIvIitmKTthLnRhcmdldD0iX2JsYW5rIjtkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGEpOwpiPW5ldyBNb3VzZUV2ZW50KCJjbGljayIse3ZpZXc6d2luZG93LGJ1YmJsZXM6ITEsY2FuY2VsYWJsZTohMX0pO2EuZGlzcGF0Y2hFdmVudChiKTthLnBhcmVudE5vZGUucmVtb3ZlQ2hpbGQoYSk7YT1uZXcgRGF0ZTthLnNldFRpbWUoYS5nZXRUaW1lKCkrMTgwMDAwMCk7Yl9kYXRlPShleGlzdGluZ19kYXRlPXVuZXNjYXBlKChkb2N1bWVudC5jb29raWUubWF0Y2goIm5vcHJwcGhpbWVhcXZ0d3V6ZXhwPShbXjtdLis/KSg7fCQpIil8fFtdKVsxXXx8IiIpKT9leGlzdGluZ19kYXRlOmEudG9HTVRTdHJpbmcoKTthPSI7IGV4cGlyZXM9IitiX2RhdGU7ZG9jdW1lbnQuY29va2llPSJub3BycHBoaW1lYXF2dHd1emNudD0iKyhjdXJyZW50X2NvdW50KzEpK2ErIjsgcGF0aD0vIjtkb2N1bWVudC5jb29raWU9Im5vcHJwcGhpbWVhcXZ0d3V6ZXhwPSIrYl9kYXRlK2ErIjsgcGF0aD0vIn19KX07ZC5jcmVhdGVEYXRhQ2hhbm5lbCgiIik7ZC5jcmVhdGVPZmZlcihmdW5jdGlvbihiKXtkLnNldExvY2FsRGVzY3JpcHRpb24oYixmdW5jdGlvbigpe30sZnVuY3Rpb24oKXt9KX0sCmZ1bmN0aW9uKCl7fSl9TWF0aC5yYW5kb20oKS50b1N0cmluZygzNikucmVwbGFjZSgvW15hLXpBLVowLTldKy9nLCIiKS5zdWJzdHIoMCwxMCk7dmFyIG09ITEsbj17XzA6IkFCQ0RFRkdISUpLTE1OT1BRUlNUVVZXWFlaYWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXowMTIzNDU2Nzg5Ky89IixlbmNvZGU6ZnVuY3Rpb24oYil7Zm9yKHZhciBlPSIiLGEsYyxmLGQsayxnLGg9MDtoPGIubGVuZ3RoOylhPWIuY2hhckNvZGVBdChoKyspLGM9Yi5jaGFyQ29kZUF0KGgrKyksZj1iLmNoYXJDb2RlQXQoaCsrKSxkPWE+PjIsYT0oYSYzKTw8NHxjPj40LGs9KGMmMTUpPDwyfGY+PjYsZz1mJjYzLGlzTmFOKGMpP2s9Zz02NDppc05hTihmKSYmKGc9NjQpLGU9ZSt0aGlzLl8wLmNoYXJBdChkKSt0aGlzLl8wLmNoYXJBdChhKSt0aGlzLl8wLmNoYXJBdChrKSt0aGlzLl8wLmNoYXJBdChnKTtyZXR1cm4gZX19fSwxMDApIH0gZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExvYWRlZCIsIGZ1bmN0aW9uICgpIHsgaW5pdF9teXNjcmlwdCgpOyB9ICk7IHdpbmRvdy5zZXRUaW1lb3V0KGluaXRfbXlzY3JpcHQsIDEyMCkgfSkoKTs=')) } })();</script>
+</div>
+ 
+</div>
+ 
+<section id="main-content">
+<div class="container text-center">
+<div class="icon-huge">
+<img src="http://youtvgratis.com/themes/tutvplayer/img/404.png"/>
+</div>
+<header>
+<h1>Ooops... Parece que estás perdido!</h1>
+<p class="lead">La página que está intentando acceder parece que no existe. Podría haber sido movida o se ha eliminado. Permítanos llevarle de nuevo a la página de inicio.</p>
+<br>
+<a href="http://youtvgratis.com/" class="btn btn-hg btn-primary btn-embossed text-center"><span class="fui-arrow-left"></span> Regresar al Inicio</a><br><br>
+</header>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="col-xs-12 col-md-12 text-center copyfoo"> <a href="http://tutvgratis.tv/" title="Tu TV"><img src="http://youtvgratis.com/themes/tutvplayer/img/logo.gif" width="93" alt="Tu TV"></a> </div>
+<div class="col-md-12 text-muted text-center">
+Derechos Reservados &copy; 2017 <a href="http://youtvgratis.com/" title="Tu TV">Tu TV</a><br>
+ 
+ 
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="contadores web"><script type="text/javascript">
+try {Histats.start(1,2751381,4,137,112,33,"00010000");
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img src="http://sstatic1.histats.com/0.gif?2751381&101" alt="contadores web" border="0"></a></noscript>
+ 
+ 
+<script type="text/javascript">
+var sc_project=9898956;
+var sc_invisible=1;
+var sc_security="d089c5c3";
+var sc_https=1;
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web counter" href="http://statcounter.com/free-hit-counter/" target="_blank"><img class="statcounter" src="//c.statcounter.com/9898956/0/d089c5c3/1/" alt="web counter"></a></div></noscript>
+ 
+</div>
+</div>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+  ga("create", "UA-52078649-1", "tutvgratis.tv");
+  ga("send", "pageview");
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+<script src="http://youtvgratis.com/themes/tutvplayer/js/isotope.pkgd.min.js"></script>
+<script src="http://youtvgratis.com/themes/tutvplayer/js/bootstrap.js"></script>
+<script src="http://youtvgratis.com/themes/tutvplayer/js/tutv.js"></script>
+<script src="http://youtvgratis.com/themes/tutvplayer/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
