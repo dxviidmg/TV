@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'prueba',
     'canales',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,10 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+from django.core.urlresolvers import reverse_lazy
+
+LOGIN_REDIRECT_URL = reverse_lazy('accounts:ViewProfile')
+#LOGOUT_REDIRECT_URL = reverse_lazy('accounts:login')
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)

@@ -5,9 +5,11 @@ class Categoria(models.Model):
 
 	def __str__(self):
 		return self.nombre
-				
-class Canal(models.Model):
 
+	class Meta:
+		ordering = ['nombre']
+
+class Canal(models.Model):
 	categoria = models.ForeignKey(Categoria)
 	nombre = models.CharField(max_length=30)
 	enlace = models.CharField(max_length=30)
@@ -15,3 +17,6 @@ class Canal(models.Model):
 	
 	def __str__(self):
 		return self.nombre
+
+	class Meta:
+		ordering = ['nombre']

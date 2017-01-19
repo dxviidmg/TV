@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from prueba import urls as pruebaUrls
 from canales import urls as canalesUrls
+from accounts import urls as accountsUrls
 #Libreria para importar imagenes
 from django.views.static import serve
 from django.conf import settings
@@ -24,6 +25,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(canalesUrls, namespace="canales")),
+    url(r'^', include(accountsUrls, namespace="accounts")),
     url(r'^', include(pruebaUrls, namespace="prueba")),
     url(
         regex=r'^media/(?P<path>.*)$',
