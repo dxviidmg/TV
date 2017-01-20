@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'prueba',
     'canales',
-    'accounts'
+    'accounts',
+    'main',
+#    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'TV.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,6 +67,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                     # Python Social Auth Context Processors
+  #              'social.apps.django_app.context_processors.backends',
+ #               'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -106,9 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 
@@ -128,6 +133,20 @@ MEDIA_URL = '/media/'
 from django.core.urlresolvers import reverse_lazy
 
 LOGIN_REDIRECT_URL = reverse_lazy('accounts:ViewProfile')
-#LOGOUT_REDIRECT_URL = reverse_lazy('accounts:login')
+LOGOUT_REDIRECT_URL = reverse_lazy('main:home')
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+
+#AUTHENTICATION_BACKENDS = (
+    # Facebook
+ #   'social.backends.facebook.FacebookOAuth2',
+    # Django
+  #  'django.contrib.auth.backends.ModelBackend',
+
+#)
+
+#SOCIAL_AUTH_FACEBOOK_KEY = '457061628015763'
+#SOCIAL_AUTH_FACEBOOK_SECRET = 'cf3fb45b03387626647e39b1dc152c93'
+#SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
+
+#SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']

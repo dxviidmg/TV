@@ -18,6 +18,7 @@ from django.contrib import admin
 from prueba import urls as pruebaUrls
 from canales import urls as canalesUrls
 from accounts import urls as accountsUrls
+from main import urls as mainUrls
 #Libreria para importar imagenes
 from django.views.static import serve
 from django.conf import settings
@@ -27,9 +28,12 @@ urlpatterns = [
     url(r'^', include(canalesUrls, namespace="canales")),
     url(r'^', include(accountsUrls, namespace="accounts")),
     url(r'^', include(pruebaUrls, namespace="prueba")),
+    url(r'^', include(mainUrls, namespace="main")),
     url(
         regex=r'^media/(?P<path>.*)$',
         view=serve,
         kwargs ={'document_root':settings.MEDIA_ROOT}
     ),
+    # Python Social Auth URLs
+   # url('', include('social.apps.django_app.urls', namespace='social')),
 ]

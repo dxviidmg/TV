@@ -1,4 +1,7 @@
+{%extends 'base.html'%}
 
-<h1>{{request.user.username}}</h1>
+{%block content%}
+<p>{{request.user.username}}</p>
 
 <img src="{{perfil.fotografia.url}}">
+{%endblock content%}

@@ -20,8 +20,7 @@ class UserCreateForm(forms.ModelForm):
 #		if User.objects.filter(email=cd['email']).exists():		
 #			raise forms.ValidationError("This email already used")
 #		return cd['email']
-
 class PerfilCreateForm(forms.ModelForm):
 	class Meta:
 		model = Perfil
-		fields = ('fecha_de_nacimiento', 'fotografia')
+		fields = ('fotografia',)

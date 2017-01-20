@@ -1,3 +1,7 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
 <h1>Menú</h1>
 
 {%for CanalesPorCategoria in ListaDeCanalesPorCategoria%}
@@ -11,3 +15,5 @@
 {%empty%}
 
 {%endfor%}
+
+{%endblock content%}
