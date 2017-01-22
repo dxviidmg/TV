@@ -7,7 +7,7 @@
 {%for CanalesPorCategoria in ListaDeCanalesPorCategoria%}
 <p>{{CanalesPorCategoria.categoria}}</p>
 	{%for canal in CanalesPorCategoria.canales%}
-	<a href="{%url 'canales:DetailViewCanal' canal.pk%}"><img src="{{canal.logo.url}}"></a>
+	<a href="{%url 'canales:DetailViewCanal' slug=canal.slug%}"><img src="{{canal.logo.url}}"></a>
 	{%empty%}
 	vacio
 	{%endfor%}

@@ -1,7 +1,8 @@
 from django.conf.urls import url
 from . import views
-from django.contrib.auth.views import login, logout
+from django.contrib.auth.views import login, logout, password_reset, password_reset_done
 
+#	 django.contrib.auth.views.  password_reset_done
 urlpatterns = [
 	
 	url(r'^logout/$', logout, name="logout"),
@@ -14,4 +15,8 @@ urlpatterns = [
 #	url(r'^accounts/(?P<pk>\d+)/$', views.DetailViewAccount.as_view(), name="DetailViewAccount"),
 #	url(r'^accounts', views.ListViewAccounts.as_view(),name="ListViewAccounts"),
 	
+	url(r'^change-password/$', views.ViewChangePassword.as_view(), name='ViewChangePassword'),
+#	url(r'^reset-password/$', password_reset, name='reset_password'),
+
+#	url(r'^reset-password/done/$', password_reset_done, name='password_reset_done'),
 ]

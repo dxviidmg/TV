@@ -18,9 +18,9 @@ class ListViewCanales(View):
 		return render(request, template_name, context)
 
 class DetailViewCanal(View):
-	def get(self, request, pk):
+	def get(self, request, slug):
 		template_name = 'canales/DetailCanal.html'
-		canal = get_object_or_404(Canal, pk=pk)
+		canal = get_object_or_404(Canal, slug=slug)
 		context = {
 		'canal': canal
 		}

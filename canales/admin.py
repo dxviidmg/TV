@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import *
 
-admin.site.register(Categoria)
-admin.site.register(Canal)
+class CanalAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('enlace', )}
 
+
+admin.site.register(Canal, CanalAdmin)
+admin.site.register(Categoria)
