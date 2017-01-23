@@ -5,6 +5,7 @@ from django.contrib import messages
 from .models import *
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
+from django.core.urlresolvers import reverse_lazy
 
 class CreateViewAccount(View):
 	def get(self, request):
@@ -48,8 +49,6 @@ class ViewProfile(View):
 		}
 		return render(request,template_name, context)
 
-
-
 class ViewChangePassword(View):
 	def get(self, request):
 		template_name = "accounts/change_password.html"
@@ -58,22 +57,6 @@ class ViewChangePassword(View):
 		'form': form,
 		}
 		return render(request,template_name, context)
-#	def change_password(request):
-#		if request.method == 'POST':
-#			form = PasswordChangeForm(data=request.POST, user=request.user)
-
-#			if form.is_valid():
-#				form.save()
-#				update_session_auth_hash(request, form.user)
-#				return redirect(reverse('accounts:ViewProfile'))
-#			else:
-#				return redirect(reverse('accounts:ViewChangePassword'))
-#		else:
-#			form = PasswordChangeForm(user=request.user)
-#
-#			args = {'form': form}
-#			return render(request, 'accounts/change_password.html', args)
-
 	def post(self,request):
 		template_name = "accounts/change_password.html"
 		form = PasswordChangeForm(data=request.POST, user=request.user)
@@ -82,7 +65,6 @@ class ViewChangePassword(View):
 			form.save()
 			update_session_auth_hash(request, form.user)
 			return redirect('accounts:ViewProfile')
-
 		else:
 			context = {
 			'form': form,

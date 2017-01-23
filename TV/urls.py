@@ -34,6 +34,5 @@ urlpatterns = [
         view=serve,
         kwargs ={'document_root':settings.MEDIA_ROOT}
     ),
-    # Python Social Auth URLs
-   # url('', include('social.apps.django_app.urls', namespace='social')),
+    
 ]

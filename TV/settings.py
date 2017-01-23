@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'canales',
     'accounts',
     'main',
-#    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE = [
@@ -67,9 +66,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                     # Python Social Auth Context Processors
-  #              'social.apps.django_app.context_processors.backends',
- #               'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -136,17 +132,14 @@ LOGIN_REDIRECT_URL = reverse_lazy('accounts:ViewProfile')
 LOGOUT_REDIRECT_URL = reverse_lazy('main:home')
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+STATIC_ROOT = 'staticfiles'
 
-#AUTHENTICATION_BACKENDS = (
-    # Facebook
- #   'social.backends.facebook.FacebookOAuth2',
-    # Django
-  #  'django.contrib.auth.backends.ModelBackend',
-
-#)
-
-#SOCIAL_AUTH_FACEBOOK_KEY = '457061628015763'
-#SOCIAL_AUTH_FACEBOOK_SECRET = 'cf3fb45b03387626647e39b1dc152c93'
-#SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
-
-#SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+#Configuración para enviar correos electrónicos
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'dxviidmg@gmail.com'
+SERVER_EMAIL = 'test@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'dxviidmg@gmail.com'
+EMAIL_HOST_PASSWORD = 'guitarra1'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
