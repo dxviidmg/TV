@@ -137,9 +137,14 @@ STATIC_ROOT = 'staticfiles'
 #Configuración para enviar correos electrónicos
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'dxviidmg@gmail.com'
-SERVER_EMAIL = 'test@gmail.com'
+SERVER_EMAIL = 'dxviidmg@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'dxviidmg@gmail.com'
 EMAIL_HOST_PASSWORD = 'guitarra1'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.authentication.EmailAuthBackend',
+)

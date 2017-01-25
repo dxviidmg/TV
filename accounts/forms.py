@@ -16,10 +16,11 @@ class UserCreateForm(forms.ModelForm):
 		return cd['password2']
 
 #	def clean_email(self):
-#		cd = self.cleaned_data
-#		if User.objects.filter(email=cd['email']).exists():		
+#		cd = self.cleaned_data['email']
+#		if User.objects.filter(email=cd).exists():
 #			raise forms.ValidationError("This email already used")
-#		return cd['email']
+#		return cd
+
 class PerfilCreateForm(forms.ModelForm):
 	class Meta:
 		model = Perfil
