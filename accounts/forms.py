@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from .models import Perfil
+
 class UserCreateForm(forms.ModelForm):
 	password = forms.CharField(label='Password',widget=forms.PasswordInput)
 	password2 = forms.CharField(label='Repite tu password',widget=forms.PasswordInput)
@@ -15,11 +16,17 @@ class UserCreateForm(forms.ModelForm):
 			raise forms.ValidationError('Los passwords no coicinden')
 		return cd['password2']
 
-#	def clean_email(self):
-#		cd = self.cleaned_data['email']
-#		if User.objects.filter(email=cd).exists():
-#			raise forms.ValidationError("This email already used")
-#		return cd
+	def clean_username(self):
+		cd = self.cleaned_data['username']
+		if User.objects.filter(username=cd).exists():
+			raise forms.ValidationError("Este usuario ya ha sido registrado")
+		return cd
+
+	def clean_email(self):
+		cd = self.cleaned_data['email']
+		if User.objects.filter(email=cd).exists():
+			raise forms.ValidationError("Este correo electrónico ya ha sido registrado")
+		return cd
 
 class PerfilCreateForm(forms.ModelForm):
 	class Meta:

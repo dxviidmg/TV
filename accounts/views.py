@@ -21,12 +21,16 @@ class CreateViewAccount(View):
 		template_name = "accounts/createAccount.html"
 		NuevoUserForm = UserCreateForm(request.POST)
 		NuevoPerfilForm = PerfilCreateForm(request.POST, request.FILES)
-		if NuevoUserForm.is_valid():
-			NuevoUser = NuevoUserForm.save(commit=False)	
+		if NuevoUserForm.is_valid() and NuevoPerfilForm.is_valid():
+			NuevoUser = NuevoUserForm.save(commit=False)
+			NuevoUser.username = str(NuevoUserForm.cleaned_data['username'])
+			NuevoUser.first_name = str(NuevoUserForm.cleaned_data['first_name'])
+			NuevoUser.last_name = str(NuevoUserForm.cleaned_data['last_name'])
+			NuevoUser.email = str(NuevoUserForm.cleaned_data['email'])	
 			NuevoUser.set_password(NuevoUserForm.cleaned_data['password'])
 			NuevoUser.save()
 
-		if NuevoPerfilForm.is_valid():
+		#if NuevoPerfilForm.is_valid():
 			NuevoPerfil = NuevoPerfilForm.save(commit=False)
 			NuevoPerfil.user = NuevoUser
 			NuevoPerfil.save()

@@ -1,7 +1,20 @@
 {%extends 'base.html'%}
 
 {%block content%}
-<p>{{request.user.username}}</p>
+<style type="text/css">
+	.avatar {
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 100px;
+    width: 100px;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+</style>
+<p>Nombre: {{request.user.first_name}}</p>
+<p>Apellidos: {{request.user.last_name}}</p>
 
-<img src="{{perfil.fotografia.url}}">
+<img class="avatar" src="{{perfil.fotografia.url}}">
 {%endblock content%}

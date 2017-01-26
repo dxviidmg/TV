@@ -21,7 +21,11 @@ class DetailViewCanal(View):
 	def get(self, request, slug):
 		template_name = 'canales/DetailCanal.html'
 		canal = get_object_or_404(Canal, slug=slug)
+		categoria = Categoria.objects.get(canal=canal)
+		canalesRelacionados = Canal.objects.filter(categoria=categoria).exclude(pk=canal.pk)
 		context = {
-		'canal': canal
+			'canal': canal,
+			'categoria': categoria,
+			'canalesRelacionados': canalesRelacionados,
 		}
 		return render(request, template_name, context)
