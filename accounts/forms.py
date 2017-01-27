@@ -33,5 +33,10 @@ class PerfilCreateForm(forms.ModelForm):
 		model = Perfil
 		fields = ('fotografia',)
 
+class UserEditForm(forms.ModelForm):
+	
+	class Meta:
+		model = User
+		fields = ('first_name', 'last_name',)
 #class PasswordResetRequestForm(forms.Form):
 #	email_or_username = forms.CharField(label=("Email Or Username"), max_length=254)

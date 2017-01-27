@@ -40,19 +40,35 @@ class CreateViewAccount(View):
 			'UserForm': NuevoUserForm,
 			'PerfilForm': NuevoPerfilForm
 			}
-			return render(request,template_name,context)
+			return redirect('accounts:ViewProfile')
+#			return render(request,template_name,context)
 
 class ViewProfile(View):
 #	@method_decorator(login_required)
 	def get(self, request):
 		template_name = "accounts/viewProfile.html"
 		perfil = Perfil.objects.get(user=request.user)
-		print(perfil)
+		UserForm = UserEditForm(instance=request.user)
+		PerfilForm = PerfilCreateForm(instance=perfil)
+		
 		context = {
-			'perfil': perfil
+			'perfil': perfil,
+			'UserForm': UserForm,
+			'PerfilForm': PerfilForm,
 		}
 		return render(request,template_name, context)
+	def post(self, request):
+		template_name = "accounts/viewProfile.html"
+		perfil = Perfil.objects.get(user=request.user)
+		EdicionUserForm = UserEditForm(instance=request.user, data=request.POST)
+		EdicionPerfilForm = PerfilCreateForm(instance=perfil, data=request.POST, files=request.FILES)
 
+		if EdicionUserForm.is_valid:
+			EdicionUserForm.save()
+		if EdicionPerfilForm.is_valid:
+			EdicionPerfilForm.save()
+#		return render(request, template_name)
+		return redirect('accounts:ViewProfile')
 class ViewChangePassword(View):
 	def get(self, request):
 		template_name = "accounts/change_password.html"

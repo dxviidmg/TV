@@ -136,7 +136,7 @@ STATIC_ROOT = 'staticfiles'
 
 #Configuración para enviar correos electrónicos
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'MiPruebaDjango team'
+DEFAULT_FROM_EMAIL = 'MiPruebaDjango Team'
 SERVER_EMAIL = 'dxviidmg@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587

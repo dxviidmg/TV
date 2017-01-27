@@ -13,8 +13,13 @@
     background-size: 100% auto;
 }
 </style>
-<p>Nombre: {{request.user.first_name}}</p>
-<p>Apellidos: {{request.user.last_name}}</p>
-
-<img class="avatar" src="{{perfil.fotografia.url}}">
+{%if perfil.fotografia%}
+    <img class="avatar" src="{{perfil.fotografia.url}}">
+{%endif%}
+	<form action="." method="post" enctype="multipart/form-data">
+		{%csrf_token%}
+		{{UserForm.as_p}}
+		{{PerfilForm.as_p}}
+		<input type="submit" value="Guardar cambios">
+	</form>
 {%endblock content%}

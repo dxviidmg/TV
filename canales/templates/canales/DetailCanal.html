@@ -1,13 +1,26 @@
 {%extends 'base.html'%}
 
 {%block content%}
+	<style type="text/css">
+		.a {
+		position: absolute;
+		left: 5px;
+		top: -100px;
+		z-index: -1;
+	}
+	</style>
 
-	<iframe width="728" height="410" scrolling="no" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" src="http://youtvgratis.com/embed/{{canal.enlace}}"></iframe>
+
+	<iframe class="a" width="728" height="410" scrolling="no" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" src="http://youtvgratis.com/embed/{{canal.enlace}}"></iframe>
 	  
 	<script type='text/javascript'> width=728, height=410, channel='{{canal.enlace}}';</script>
 	<script type='text/javascript' src='http://tutvgratis.tv/embed.js'></script>
+
+	<div style="position: absolute; top: 300px;">
 	<p>Nombre: {{canal.nombre}}</p>
 	<p><a href="{%url 'canales:ListViewCanales'%}">Regresar al menu</a></p>
+
+	<input value="refrescar" type="button" onclick="document.location.reload();">
 
 	<p>Categoria: {{categoria.nombre}}</p>
 
@@ -20,5 +33,5 @@
 	{%empty%}
 	
 	{%endfor%}
-
+	</div>
 {%endblock content%}
