@@ -7,7 +7,6 @@ urlpatterns = [
 	url(r'^logout/$', logout, name="logout"),
 
 	url(r'^accounts/profile/$', views.ViewProfile.as_view(), name="ViewProfile"),
-
 	url(r'^accounts/nuevo/$', views.CreateViewAccount.as_view(), name="CreateViewAccount"),	
 	url(r'^change-password/$', views.ViewChangePassword.as_view(), name='ViewChangePassword'),
 
