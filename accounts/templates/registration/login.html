@@ -1,3 +1,7 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
 <form action="{%url 'accounts:login'%}" method="post" enctype='multipart/form-data'>
   {% csrf_token %}
   <h4>Inicia sesión</h4>
@@ -10,3 +14,5 @@
 <p>Iniciar sesión con FB</p>
 <p><a href="{%url 'accounts:reset_password'%}">¿Olvidaste tu contraseña?</a></p>
 <p><a href="{%url 'accounts:CreateViewAccount'%}">Crear cuenta</a></p>
+
+{%endblock content%}

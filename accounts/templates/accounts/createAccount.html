@@ -1,4 +1,6 @@
+{%extends 'base.html'%}
 
+{%block content%}
 	<h2>Registrate</h2>
 	<form action="." method="post" class="centrar">
 		{%csrf_token%}
@@ -16,3 +18,5 @@
 </ul>
 {% endif %}
 </div>
+
+{%endblock content%}

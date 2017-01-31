@@ -123,12 +123,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#Configuración de imagenes
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
+#Redireccionamiento login y logout
 from django.core.urlresolvers import reverse_lazy
 
-LOGIN_REDIRECT_URL = reverse_lazy('accounts:ViewProfile')
+LOGIN_REDIRECT_URL = reverse_lazy('canales:ListViewCanales')
 LOGOUT_REDIRECT_URL = reverse_lazy('main:home')
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
@@ -144,6 +146,7 @@ EMAIL_HOST_USER = 'dxviidmg@gmail.com'
 EMAIL_HOST_PASSWORD = 'guitarra1'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
+#Autenticación por usuario y correo electrónico
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'accounts.authentication.EmailAuthBackend',

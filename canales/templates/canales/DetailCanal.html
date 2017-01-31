@@ -5,8 +5,9 @@
 		.a {
 		position: absolute;
 		left: 5px;
-		top: -100px;
+		top: -20px;
 		z-index: -1;
+		align-items: center;
 	}
 	</style>
 
@@ -16,7 +17,7 @@
 	<script type='text/javascript'> width=728, height=410, channel='{{canal.enlace}}';</script>
 	<script type='text/javascript' src='http://tutvgratis.tv/embed.js'></script>
 
-	<div style="position: absolute; top: 300px;">
+	<div style="position: absolute; top: 400px;">
 	<p>Nombre: {{canal.nombre}}</p>
 	<p><a href="{%url 'canales:ListViewCanales'%}">Regresar al menu</a></p>
 

@@ -1,3 +1,14 @@
-<h1>Home</h1>
-<p><a href="{%url 'accounts:login'%}">Inicia sesión</a></p>
-<p><a href="{%url 'accounts:CreateViewAccount'%}">Crear cuenta</a></p>
+{%extends 'base.html'%}
+
+{%block content%}
+	
+	{%if request.user.is_authenticated%}
+	
+	<p>Ya has iniciado sesión</p>
+	
+	{%else%}
+		<p><a href="{%url 'accounts:login'%}">Inicia sesión</a></p>
+		<p><a href="{%url 'accounts:CreateViewAccount'%}">Crear cuenta</a></p>
+	{%endif%}
+{%endblock content%}
+
