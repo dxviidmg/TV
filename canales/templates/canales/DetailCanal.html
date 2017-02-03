@@ -2,37 +2,44 @@
 
 {%block content%}
 	<style type="text/css">
-		.a {
-		position: absolute;
-		left: 5px;
-		top: -20px;
-		z-index: -1;
-		align-items: center;
-	}
+		.SubidaContenid
+		{
+			top: -100px;
+		}
 	</style>
 
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 SubidaContenido">
+		<div class="embed-responsive embed-responsive-16by9">
+  			<iframe class="embed-responsive-item" width="100%" height="100%" scrolling="no" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" src="http://youtvgratis.com/embed/{{canal.enlace}}"></iframe>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 SubidaContenido" align="center">
+      	<img src="{{canal.logo.url}}" height="50px" alt="{{canal.nombre}}">
+		<input class="btn btn-default" value="Actualizar" type="button" onclick="document.location.reload();">
+	</div>
+</div>
 
-	<iframe class="a" width="728" height="410" scrolling="no" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" src="http://youtvgratis.com/embed/{{canal.enlace}}"></iframe>
-	  
-	<script type='text/javascript'> width=728, height=410, channel='{{canal.enlace}}';</script>
-	<script type='text/javascript' src='http://tutvgratis.tv/embed.js'></script>
-
-	<div style="position: absolute; top: 400px;">
-	<p>Nombre: {{canal.nombre}}</p>
-	<p><a href="{%url 'canales:ListViewCanales'%}">Regresar al menu</a></p>
-
-	<input value="refrescar" type="button" onclick="document.location.reload();">
-
-	<p>Categoria: {{categoria.nombre}}</p>
-
-	<p>Canales relacionados</p>
-
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 SubidaContenido">
+	<h3>Te recomendamos:</h3>
+	
 	{%for canal in canalesRelacionados%}
 
-	<a href="{%url 'canales:DetailViewCanal' slug=canal.slug%}"><img src="{{canal.logo.url}}"></a>
+		<div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+			<a href="{%url 'canales:DetailViewCanal' slug=canal.slug%}" class="thumbnail">
+			<img src="{{canal.logo.url}}" alt="{{canal.nombre}}">
+			</a>
+		</div>
 
 	{%empty%}
 	
 	{%endfor%}
 	</div>
+</div>
+
+<script type='text/javascript'> width=728, height=410, channel='{{canal.enlace}}';</script>
+
+<script type='text/javascript' src='http://tutvgratis.tv/embed.js'></script>
+
 {%endblock content%}

@@ -12,8 +12,9 @@ class ListViewCanales(View):
 		for categoria in categorias:
 			ListaDeCanalesPorCategoria.append({'categoria': categoria.nombre, 'canales': Canal.objects.filter(categoria=categoria)})
 
+
 		context = {
-			'ListaDeCanalesPorCategoria': ListaDeCanalesPorCategoria
+			'ListaDeCanalesPorCategoria': ListaDeCanalesPorCategoria,
 		}
 		return render(request, template_name, context)
 

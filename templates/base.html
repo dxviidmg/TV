@@ -21,6 +21,10 @@
     border-radius: 50%;
     background-size: 100% auto;
 }
+
+  nav {
+    z-index: 2;
+  }
 </style>
 	
 </head>
@@ -75,6 +79,16 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    {%block content%}{%endblock content%}
+                    </div>
+                </div>
+            </div>
+
+
 <script type="text/javascript" src="{%static '/js/jquery.js'%}"></script>
   <script type="text/javascript" src="{%static '/js/bootstrap.min.js'%}"></script>
 
@@ -83,6 +97,3 @@
 
 </html>
 
-{%block content%}
-
-{%endblock content%}
