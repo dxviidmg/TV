@@ -8,21 +8,35 @@
 		}
 	</style>
 
+
+
 <div class="row">
+
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 SubidaContenido">
+	<p> Estas viendo: <img src="{{canal.logo.url}}" height="50px" alt="{{canal.nombre}}"></p>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 SubidaContenido">
+
+	
+
 		<div class="embed-responsive embed-responsive-16by9">
+
+			<div style="position: absolute; z-index: 2; background-color: black; height: 78px; width: 100%"></div>
+
+
+
+
   			<iframe class="embed-responsive-item" width="100%" height="100%" scrolling="no" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" src="http://youtvgratis.com/embed/{{canal.enlace}}"></iframe>
 		</div>
 	</div>
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 SubidaContenido" align="center">
-      	<img src="{{canal.logo.url}}" height="50px" alt="{{canal.nombre}}">
 		<input class="btn btn-default" value="Actualizar" type="button" onclick="document.location.reload();">
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 SubidaContenido">
-	<h3>Te recomendamos:</h3>
+	<h3>Recomendaciónes</h3>
 	
 	{%for canal in canalesRelacionados%}
 
