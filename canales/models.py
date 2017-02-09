@@ -14,7 +14,7 @@ class Canal(models.Model):
 	categoria = models.ForeignKey(Categoria)
 	nombre = models.CharField(max_length=30)
 	enlace = models.CharField(max_length=30)
-	logo = models.ImageField(upload_to='canales/%Y/%m/%d/', null=True, blank=True)
+	logo = models.ImageField(upload_to='canales/%Y/%m/%d/')
 	slug = models.SlugField(max_length=200, unique=True, null=True)
 
 	def get_absolute_url(self):

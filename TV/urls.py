@@ -24,11 +24,13 @@ from django.views.static import serve
 from django.conf import settings
 
 urlpatterns = [
+    url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'^admin/', admin.site.urls),
     url(r'^', include(canalesUrls, namespace="canales")),
     url(r'^', include(accountsUrls, namespace="accounts")),
     url(r'^', include(pruebaUrls, namespace="prueba")),
     url(r'^', include(mainUrls, namespace="main")),
+
     url(
         regex=r'^media/(?P<path>.*)$',
         view=serve,

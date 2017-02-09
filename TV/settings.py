@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'canales',
     'accounts',
     'main',
+    'social_django',
+ # Third-party apps
+    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +69,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+                # Python Social Auth Context Processors
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
+             ],
         },
     },
 ]
@@ -148,6 +154,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 #Autenticación por usuario y correo electrónico
 AUTHENTICATION_BACKENDS = (
+
+    # Facebook
+    'social.backends.facebook.FacebookOAuth2',
+    'social.backends.facebook.FacebookAppOAuth2',
+
     'django.contrib.auth.backends.ModelBackend',
     'accounts.authentication.EmailAuthBackend',
 )
+
+SOCIAL_AUTH_FACEBOOK_KEY = '250938405344592'
+SOCIAL_AUTH_FACEBOOK_SECRET = '2e17f5864d874383135b1f7e74cc6388'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
