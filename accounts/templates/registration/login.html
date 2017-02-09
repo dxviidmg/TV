@@ -11,11 +11,10 @@
   <p><input type="submit" value="Inicia sesión"></p>
 </form>
 
-<p>Iniciar sesión con FB</p>
 <p><a href="{%url 'accounts:reset_password'%}">¿Olvidaste tu contraseña?</a></p>
 <p><a href="{%url 'accounts:CreateViewAccount'%}">Crear cuenta</a></p>
 
-<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">FB</a>
-{{user}}
+<p>Módulo en desarrollo:
+<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Inicia sesión con Facebook</a></p>
 
 {%endblock content%}
