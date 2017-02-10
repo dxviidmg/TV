@@ -7,7 +7,6 @@
 	<p>Ya has iniciado sesión</p>
 	
 	{%else%}
-		<p><a href="{%url 'accounts:login'%}">Inicia sesión</a></p>
 		<p><a href="{%url 'accounts:CreateViewAccount'%}">Crear cuenta</a></p>
 	{%endif%}
 {%endblock content%}

@@ -2,36 +2,33 @@
 
 {%block content%}
 
-<h1>Canales</h1>
-
 <div class="row">
+		
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<h2>Canales</h2>
+		</div>
+	{%for CanalesPorCategoria in ListaDeCanalesPorCategoria%}
 
-{%for CanalesPorCategoria in ListaDeCanalesPorCategoria%}
-
-	<div class="col-xs-12 col-sm-12 col-md-12">
-		<h3>{{CanalesPorCategoria.categoria}}</h3>
-	</div>
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<h3>{{CanalesPorCategoria.categoria}}</h3>
+		</div>
 	
-	{%for canal in CanalesPorCategoria.canales%}
+		{%for canal in CanalesPorCategoria.canales%}
 
-	<div class="col-xs-4 col-sm-3 col-md-2">
-    	<a href="{%url 'canales:DetailViewCanal' slug=canal.slug%}" class="thumbnail">
-      	<img src="{{canal.logo.url}}" alt="{{canal.nombre}}">
-      		</a>
-      	<p align="center">{{canal.nombre}}</p>
+			<div class="col-xs-4 col-sm-3 col-md-2">
+    			<a href="{%url 'canales:DetailViewCanal' slug=canal.slug%}" class="thumbnail">
+      			<img src="{{canal.logo.url}}" alt="{{canal.nombre}}">
+    	  		</a>
+      			<p align="center">{{canal.nombre}}</p>
     
-  	</div>
+  			</div>
 
-	{%empty%}
+		{%empty%}
 	
-	Vacio
+			<p>Lista de canales por categoria vacía</p>
 	
+		{%endfor%}
+
 	{%endfor%}
-	
-	<br>
-	
-	{%empty%}
-
-{%endfor%}
 
 {%endblock content%}

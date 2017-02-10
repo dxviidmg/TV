@@ -156,8 +156,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 AUTHENTICATION_BACKENDS = (
 
     # Facebook
-    'social.backends.facebook.FacebookOAuth2',
     'social.backends.facebook.FacebookAppOAuth2',
+    'social.backends.facebook.FacebookOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
     'accounts.authentication.EmailAuthBackend',
@@ -165,4 +165,7 @@ AUTHENTICATION_BACKENDS = (
 
 SOCIAL_AUTH_FACEBOOK_KEY = '250938405344592'
 SOCIAL_AUTH_FACEBOOK_SECRET = '2e17f5864d874383135b1f7e74cc6388'
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+#SOCIAL_AUTH_LOGIN_URL = '/'

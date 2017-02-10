@@ -2,19 +2,22 @@
 
 {%block content%}
 
-<form action="{%url 'accounts:login'%}" method="post" enctype='multipart/form-data'>
-  {% csrf_token %}
-  <h4>Inicia sesión</h4>
-  <p>Usuario o correo electrónico: <input type="text" name="username"></p>
-  <p>Contraseña: <input type="password" name="password"></p>
+	{% if form.errors %}
+	
+	<div class="alert alert-danger" role="alert">Datos incorrectos</div>
 
-  <p><input type="submit" value="Inicia sesión"></p>
-</form>
+	{% endif %}
 
-<p><a href="{%url 'accounts:reset_password'%}">¿Olvidaste tu contraseña?</a></p>
-<p><a href="{%url 'accounts:CreateViewAccount'%}">Crear cuenta</a></p>
+	<form action="{%url 'accounts:login'%}" method="post" enctype='multipart/form-data'>
+	{% csrf_token %}
+		<h4>Inicia sesión</h4>
+		<p>Usuario o correo electrónico: <input type="text" name="username"></p>
+		<p>Contraseña: <input type="password" name="password"></p>
 
-<p>Módulo en desarrollo:
-<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Inicia sesión con Facebook</a></p>
+		<p><input type="submit" value="Inicia sesión"></p>
+	</form>
+	
+	<p><a href="{%url 'accounts:reset_password'%}">¿Olvidaste tu contraseña?</a></p>
+	<p><a href="{%url 'accounts:CreateViewAccount'%}">Crear cuenta</a></p>
 
 {%endblock content%}

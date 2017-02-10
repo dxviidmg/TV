@@ -6,6 +6,8 @@ from .models import *
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.core.urlresolvers import reverse_lazy
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 class CreateViewAccount(View):
 	def get(self, request):
@@ -30,7 +32,6 @@ class CreateViewAccount(View):
 			NuevoUser.set_password(NuevoUserForm.cleaned_data['password'])
 			NuevoUser.save()
 
-		#if NuevoPerfilForm.is_valid():
 			NuevoPerfil = NuevoPerfilForm.save(commit=False)
 			NuevoPerfil.user = NuevoUser
 			NuevoPerfil.save()
@@ -41,10 +42,9 @@ class CreateViewAccount(View):
 			'PerfilForm': NuevoPerfilForm
 			}
 			return redirect('accounts:ViewProfile')
-#			return render(request,template_name,context)
 
 class ViewProfile(View):
-#	@method_decorator(login_required)
+	@method_decorator(login_required)
 	def get(self, request):
 		template_name = "accounts/viewProfile.html"
 		perfil = Perfil.objects.get(user=request.user)
@@ -67,9 +67,10 @@ class ViewProfile(View):
 			EdicionUserForm.save()
 		if EdicionPerfilForm.is_valid:
 			EdicionPerfilForm.save()
-#		return render(request, template_name)
 		return redirect('accounts:ViewProfile')
+
 class ViewChangePassword(View):
+	@method_decorator(login_required)
 	def get(self, request):
 		template_name = "accounts/change_password.html"
 		form = PasswordChangeForm(user=request.user)
