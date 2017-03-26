@@ -26,14 +26,30 @@ nav {
     border-radius: 50%;
     background-size: 100% auto;
 }
-.divOcultador{
+.divOcultador1{
 	position: absolute; 
 	z-index: 2; 
 	background-color: black; 
-	height: 78px; 
+	height: 50px; 
 	width: 100%
 }
 
+.divOcultador2{
+  position: absolute; 
+  z-index: 2; 
+  background-color: black; 
+  height: 50px; 
+  width: 100%;
+  bottom: 0;
+}
+
+.divOcultador3{
+  position: absolute; 
+  z-index: 3; 
+  background-color: transparent; 
+  height: 100%; 
+  width: 100%;
+}
 .text-center {
   text-align: center;
 }
